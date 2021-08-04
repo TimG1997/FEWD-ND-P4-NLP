@@ -1,16 +1,11 @@
-function handleSubmit(event) {
-    event.preventDefault()
+const textToAnalyzeField = document.getElementById('text-to-analyze');
 
-    // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    checkForName(formText)
+export const handleSubmit = (event) => {
+    event.preventDefault();
+    const textToAnalyze = textToAnalyzeField.value;
+    Client.analyzeText(textToAnalyze);
+};
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
-}
 
-export { handleSubmit }
+
+
