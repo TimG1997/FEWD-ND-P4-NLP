@@ -1,6 +1,6 @@
-const resultsElement = document.getElementById('results');
+const resEl = document.getElementById('results');
 
-export const updateUI = (results, textToAnalyze, resultsElement = resultsElement) => {
+export const updateUI = (results, textToAnalyze, resultsElement = resEl) => {
     if (results.confidence === undefined) {
         resultsElement.innerHTML = 'Text could not be analyzed.';
     } else {
