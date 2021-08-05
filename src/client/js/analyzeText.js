@@ -4,7 +4,7 @@ const FETCH_OPTIONS = {
         'Content-Type': 'application/json'
     }
 };
-const ANALYZE_TEXT_ENDPOINT = '/analyzeText';
+const ANALYZE_TEXT_ENDPOINT = 'http://localhost:8081/analyzeText';
 
 export const analyzeText = (textToAnalyze) => {
     fetch(ANALYZE_TEXT_ENDPOINT, {

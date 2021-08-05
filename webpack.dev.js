@@ -12,15 +12,6 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
-    devServer: {
-        port: 8080,
-        proxy: {
-            '/': {
-                target: 'http://localhost:8081',
-                secure: false,
-            }
-        }
-    },
     module: {
         rules: [
             {
